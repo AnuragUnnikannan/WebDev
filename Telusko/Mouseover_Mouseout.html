@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouseover and Mouseout</title>
+    <script type="text/javascript">
+        function setNewImage()
+        {
+            //changes the image source on hovering
+            document.getElementById("img1").src = "https://image.freepik.com/free-vector/modern-new-year-calendar-template_1017-29096.jpg";
+        }
+
+        function setOldImage()
+        {
+            //changes the image source on moving out
+            document.getElementById("img1").src = "https://cdn.ambientedirect.com/chameleon/mediapool/thumbs/6/1d/Magis_Tempo-Wanduhr_498x498-ID44985-283efe2dfb25df003e64b25d2dfa5c95.jpg";
+        }
+    </script>
+</head>
+<body>
+    <img id="img1" onmouseover="setNewImage()" onmouseout="setOldImage()" src="https://cdn.ambientedirect.com/chameleon/mediapool/thumbs/6/1d/Magis_Tempo-Wanduhr_498x498-ID44985-283efe2dfb25df003e64b25d2dfa5c95.jpg" width="300" alt="clock">
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <script type="text/javascript">
+        var car1 = "Audi";
+        var car2 = "Mercedes";
+        var car3 = "BMW";
+        var cars = ["BMW", "Mercedes", "Audi"];
+
+        //Alternative way of declaring array, but not recommeneded
+        var arr1 = new Array("Mango", "Apple", "Banana");
+
+        //adding an element to the array at the end
+        cars.push("Porsche");
+
+        //we can also add element of any data type to an array
+        cars.push(918);
+        for(var i = 0;i<cars.length;i++)
+        {
+            document.write("<h2>"+cars[i]+"</h2>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

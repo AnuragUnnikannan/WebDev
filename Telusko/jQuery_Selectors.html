@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Selectors</title>
+    <link rel="stylesheet" href="jQuery_Selector.css">
+</head>
+<body>
+    <h2 class="myHeading" id="id1">Selectors</h2>
+    <h2 class="myHeading">Selectors</h2>
+    <h2>Selectors</h2>
+    <p>This is a paragraph outside division</p>
+    <p>This is a paragraph outside division</p>
+    
+    <div id="firstdiv" class="mydivs">
+        <p>This is first paragraph in first division</p>
+        <p>This is second paragraph in second division</p>
+    </div>
+
+    <div id="seconddiv" class="mydivs">
+        <p>This is third paragraph in second division</p>
+    </div>
+
+    <div id="thirddiv" class="mydivs">
+        <ul>
+            <li>List Item 1</li>
+            <li>List Item 2</li>
+            <li>List Item 3</li>
+            <li>List Item 4</li>
+        </ul>
+    </div>
+
+    <button onclick="fn1()">Click Here</button>
+</body>
+<!-- Importing jQuery using CDN (Content Delivery Network) -->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+<script>
+    function fn1()
+    {
+        //$() means calling jQuery library
+        //$().action();
+        $("#firstdiv, p, li").fadeToggle();
+    }
+</script>
+</html>

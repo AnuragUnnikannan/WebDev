@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expressions</title>
+    <script type="text/javascript">
+        function validate()
+        {
+            var username = document.getElementById("uname").value;
+            var regx = /E00/i;  //regx is an object
+            //checks whether "E00" exists in username
+            //i after /E00/ indicates that it will be case insensitive
+            if(regx.test(username))
+            {
+                alert("Valid Username");
+                document.getElementById("lbluser").style.visibility = "visible";
+                document.getElementById("lbluser").innerHTML = "Valid";
+                document.getElementById("lbluser").style.color = "green";
+            }
+            else
+            {
+                alert("Invalid Username");
+                //changes label visibility to visible
+                document.getElementById("lbluser").style.visibility = "visible";
+                document.getElementById("lbluser").innerHTML = "Invalid";
+                document.getElementById("lbluser").style.color = "red";
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="message.html">
+        <input id="uname" placeholder="Username" type="text">
+        <br>
+        <label id="lbluser" style="color: red; visibility: hidden;">Invalid Username</label>
+        <br>
+    </form>
+    <button onclick="validate()" type="button">Submit</button>
+</body>
+</html>

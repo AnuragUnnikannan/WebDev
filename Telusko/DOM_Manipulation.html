@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+    <script type="text/javascript">
+        function buttonClick()
+        {
+            //to show a message in a dialog box
+            /* alert("Button Clicked"); */
+            
+            //changes the content of h2 tag with heading2 id
+            /* document.getElementById("heading2").innerHTML = "DOM Manipulation"; */
+
+            //will show a diallog box which will have the content of the h2 tag having heading2 id
+            var str = document.getElementById("heading2").innerHTML;
+            alert(str);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="buttonClick()">Click Here</button>
+    <h2 id="heading2">Some Random Text</h2>
+</body>
+</html>

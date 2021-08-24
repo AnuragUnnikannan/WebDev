@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Box</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="jQueryUI/jquery-ui.css">
+    <link rel="stylesheet" href="jQueryUI/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jQueryUI/jquery-ui.theme.css">
+</head>
+<body>
+    <h2>Message Box in jQuery UI</h2>
+    <div id="firstdiv" class="mydivs">
+        <h3>Sample Heading 1</h3>
+        <br>
+        <button id="btn1">Click to show message box</button>
+    </div>
+    <br>
+    <div id="messagebox" title="MessageBox" class="mydivs">
+        <h3>Sample Heading 2</h3>
+        <img src="sample_image.png" width="200px">
+        <br>
+    </div>
+</body>
+
+<!-- Importing jQuery using CDN (Content Delivery Network) -->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+
+<!-- jQuery UI should be imported after jQuery -->
+<script src="jQueryUI/jquery-ui.js" type="text/javascript"></script>
+
+<script>
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+            $("#messagebox").dialog({
+                //for title of the message box
+                title: "Custom Message Box",
+
+                //for fixing the position of the message box
+                draggable: false,
+
+                //for resizzing the message box
+                resizeable: true,
+
+                height: 500,
+                width: 300,
+
+                //until the message box is not closed, we cannot do anything in the website (like privacy policy dialog boxes)
+                modal: true,
+
+                /*
+                * dynamically creating buttons inside message box.
+
+                * text is for the text inside the button
+
+                * icon is for giving the button an icon next to the text
+
+                * click means the action performed on clicking the button.
+
+                * dialog(close) closes the message box
+                */
+                buttons: [
+                    {
+                        text: "Close",
+                        icon: "ui-icon-heart",
+                        click: function(){
+                            $(this).dialog("close")
+                        }
+                    },
+                    {
+                        text: "Ok",
+                        icon: "ui-icon-heart",
+                        click: function(){
+                            $(this).dialog("close");
+                        }
+                    }
+                ]
+            });
+        });
+    });
+</script>
+</html>

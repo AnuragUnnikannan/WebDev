@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element from tag</title>
+    <script type="text/javascript">
+        function changeStyling()
+        {
+            //stores all the text inside the p tag in an array
+            var para = document.getElementsByTagName("p");
+            
+            //changes the font size of 1st paragraph
+            /* para[0].style.fontSize = "25px";
+            para[1].style.color = "red";
+            para[2].style.fontWeight = "bold";
+            para[3].style.fontStyle = "italic"; */
+
+            //changing font size of all the paragraph together.
+            for(var i = 0;i<para.length;i++)
+            {
+                para[i].style.fontSize = "22px";
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>This is paragraph 1</p>
+    <p>This is paragraph 2</p>
+    <p>This is paragraph 3</p>
+    <p>This is paragraph 4</p>
+    <p>This is paragraph 5</p>
+    <br>
+    <button onclick="changeStyling()">Click Here</button>
+</body>
+</html>

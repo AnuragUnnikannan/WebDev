@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Buttons Input</title>
+    <script type="text/javascript">
+        function buttonClicked()
+        {
+            var rad1 = document.getElementById("rad1");
+            var rad2 = document.getElementById("rad2");
+            if(rad1.checked == true)
+            {
+                alert("Color selected is "+rad1.value);
+            }
+            else if(rad2.checked == true)
+            {
+                alert("Color selected is "+rad2.value);
+            }
+            else
+            {
+                alert("Neither "+rad1.value+" nor "+rad2.value+" are selected");
+            }
+        }
+    </script>
+</head>
+<body>
+    <input name="Group1" type="radio" value="Red" id="rad1">Red
+    <br>
+    <input name="Group1" type="radio" value="Blue" id="rad2">Blue
+    <br>
+    <button onclick="buttonClicked()">Click Here</button>
+</body>
+</html>

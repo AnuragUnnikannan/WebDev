@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Events</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2 class="myHeading" id="id1">Selectors</h2>
+    <h2 class="myHeading">Selectors</h2>
+    <h2>Selectors</h2>
+
+    <button id="btn1">Click Here</button>
+    <button id="btn2">Double Click Here</button>
+    <button id="btn3">Hover Here</button>
+    <button id="btn4">Hide First Div</button>
+    <button id="btn5">Animate</button>
+    <button id="btn6">Callback</button>
+    <button id="btn7">Chaining</button>
+
+    <p>This is a paragraph outside division</p>
+    <p>This is a paragraph outside division</p>
+
+    <div id="firstdiv" class="mydivs">
+        <p>This is first paragraph in first division</p>
+        <p>This is second paragraph in second division</p>
+    </div>
+
+    <div id="seconddiv" class="mydivs">
+        <p>This is third paragraph in second division</p>
+    </div>
+
+    <div id="thirddiv" class="mydivs">
+        <ul>
+            <li>List Item 1</li>
+            <li>List Item 2</li>
+            <li>List Item 3</li>
+            <li>List Item 4</li>
+        </ul>
+    </div>
+
+    <div>
+        <ul>
+            <li>List Item 1</li>
+            <li>List Item 2</li>
+            <li>List Item 3</li>
+            <li>List Item 4</li>
+        </ul>
+    </div>
+
+    <div id="cube" class="myCube">
+        <p>CUBE</p>
+    </div>
+    
+</body>
+<!-- Importing jQuery using CDN (Content Delivery Network) -->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+
+<script>
+
+    //function will be executed after the page is ready/fully loaded
+    $(document).ready(function() {
+        //when button is clicked, call fn1
+        $("#btn1").click(fn1);
+        function fn1()
+        {
+            //$() means calling jQuery library
+            //$().action();
+            $("#firstdiv").fadeToggle();
+        }
+
+        //when button is double clicked, call fn2
+        $("#btn2").dblclick(fn2);
+        function fn2()
+        {
+            $("#seconddiv").fadeToggle();
+        }
+
+        //when mouse is inside the button, call fn3
+        /* $("#btn3").mouseenter(fn3);
+        function fn3()
+        {
+            $("#thirddiv").fadeOut();
+        } */
+
+        //when mouse is outside the button, call fn3
+        /* $("#btn3").mouseleave(fn3);
+        function fn3()
+        {
+            $("#thirddiv").fadeIn();
+        } */
+
+        //combining above two functions using hover()
+        $("#btn3").hover(fn3, fn4);
+        function fn3()
+        {
+            $("#thirddiv").fadeOut();
+        }
+
+        function fn4()
+        {
+            $("#thirddiv").fadeIn();
+        }
+
+        //hides first div
+        //use of anonymous function
+        /* $("#btn4").click(function() {
+            $("#firstdiv").hide();
+        }) */
+        
+        //toggles first div
+        /* $("#btn4").click(function(){
+            $("#firstdiv").toggle();
+        }); */
+
+
+        //hides first div by sliding up, and shows it again by sliding down
+        $("#btn4").click(function(){
+            $("#firstdiv").slideToggle();
+        });
+
+        $("#btn5").click(function(){
+
+            //parameters of animate() -> css properties, time, callback (optional)
+            $("#cube").animate({
+                left: '150px',
+                opacity: '1',
+                width: '100px',
+                height: '100px'
+            }, 1000);
+        });
+
+
+        //callback -> a function will be called after the animation has been fully completed
+        $("#btn6").click(function(){
+            $("#firstdiv").fadeToggle(3000, function(){
+                alert("division is faded");
+            });
+        });
+
+        //Chaining
+        $("#btn7").click(function(){
+            $("#firstdiv").slideUp(2000).slideDown(2000).fadeOut(2000).fadeIn(2000);
+        });
+    });
+</script>
+
+</html>

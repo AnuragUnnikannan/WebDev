@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Picker Widget (jQuery UI)</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="jQueryUI/jquery-ui.css">
+    <link rel="stylesheet" href="jQueryUI/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jQueryUI/jquery-ui.theme.css">
+</head>
+
+<body>
+    <div id="mydiv">
+        <h3>Introduction to jQuery UI</h3>
+        <input id="dateinput1" type="text" placeholder="Click to select date">
+        <br><br>
+        <input type="text" id="dateinput2" placeholder="Click to select date">
+    </div>
+</body>
+
+<!-- Importing jQuery using CDN (Content Delivery Network) -->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+
+<!-- jQuery UI should be imported after jQuery -->
+<script src="jQueryUI/jquery-ui.js" type="text/javascript"></script>
+
+<script>
+    $(document).ready(function(){
+        //displays a calender inside the div
+        /* $("#mydiv").datepicker(); */
+        
+        //on clicking inside the input box, calendar opens up.
+        $("#dateinput1").datepicker();
+
+        $("#dateinput2").datepicker({
+            //for displaying multiple months
+            numberOfMonths: 2,
+            //for drop down for years
+            changeYear: true,
+            //for drop down for months
+            changeMonth: true,
+            //for showing week number
+            showWeek: true,
+            //for heading of week number
+            weekHeader: "wk no",
+            //for showing previous months
+            showOtherMonths: true,
+            minDate: new Date(2017, 0, 1),  //year, month number, day
+            maxDate: new Date(2023, 0, 1)
+        });
+    });
+</script>
+
+</html>

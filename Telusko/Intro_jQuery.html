@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro_jQuery</title>
+</head>
+<body>
+    <body>
+        <h2 id="heading1">Setting up jQuery</h2>
+        <button onclick="fn1()" id="btn1">Click Here</button>
+    </body>
+
+    <!-- Importing jQuery using CDN (Content Delivery Network) -->
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+    <!-- <script src="jquery-3_5_1.js"></script> -->
+    <script>
+        function fn1()
+        {
+            //fading the text inside h1, with duration of 2000ms. It will fade out if the text is visible and will fade in if the text is invisible
+            $("#heading1").fadeToggle(2000);
+        }
+    </script>
+</body>
+</html>

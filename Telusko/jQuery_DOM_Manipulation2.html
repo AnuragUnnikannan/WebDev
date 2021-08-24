@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery DOM Manipulation2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h3>jQuery DOM Manipulation2</h3>
+    <button id="btn1">Append</button>
+    <button id="btn2">After</button>
+    <button id="btn3">Prepend</button>
+    <button id="btn4">Before</button>
+    <br><br>
+    <button id="btn5">Remove</button>
+    <button id="btn6">Empty</button>
+
+    <div id="div1" class="mydivs">
+        <p id="p1" class="p1class">This is first <b>paragraph</b> in <i>first</i> division</p>
+        <p id="p2" class="p2class">This is second <b>paragraph</b> in <i>first</i> division</p>
+    </div>
+</body>
+
+<!-- Importing jQuery using CDN (Content Delivery Network) -->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function(){
+        //inserts content at the end of the selected elements
+        $("#btn1").click(function(){
+            $("#div1").append("<p>This is second paragraph in first division.</p>");
+        });
+
+        //inserts content after the selected elements
+        $("#btn2").click(function(){
+            $("#div1").after("<p>This is second paragraph in first division.</p>");
+        });
+
+        //inserts content at the beginning of the selected elements
+        $("#btn3").click(function(){
+            $("#div1").prepend("<p>This is second paragraph in first division.</p>");
+        });
+
+        //inserts content before the selected elements
+        $("#btn4").click(function(){
+            $("#div1").before("<p>This is second paragraph in first division.</p>");
+        });
+
+        //removes the selected element and its child elements
+        $("#btn5").click(function(){
+            $("#div1").remove();
+
+            //if we want to remove one specific paragraph
+            /* $("p").remove("#p2"); */
+        });
+
+        //removes the child elements from the selected elements
+        $("#btn6").click(function(){
+            $("#div1").empty();
+        });
+    });
+</script>
+
+</html>

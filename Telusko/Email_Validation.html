@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+    <script type="text/javascript">
+        function validate()
+        {
+            var text = document.getElementById("text1").value;
+            /* (name)@(domain).(extension).(extension)   [last extension is optional] */
+            /*name can contain a-z, A-Z, 0-9, ., -
+            domain can contain a-z, A-Z, 0-9, -
+            extension can contain only a-z
+            */
+            var regx = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,8})(.[a-z]{2,8})?$/;
+            if(regx.test(text))
+            {
+                document.getElementById("lbltext").innerHTML = "valid";
+                document.getElementById("lbltext").style.visibility = "visible";
+                document.getElementById("lbltext").style.color = "green";
+            }
+            else
+            {
+                document.getElementById("lbltext").innerHTML = "invalid";
+                document.getElementById("lbltext").style.visibility = "visible";
+                document.getElementById("lbltext").style.color = "red";
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text" id="text1" placeholder="Email">
+        <br><br>
+        <label id="lbltext" style="color: red; visibility: hidden;">Invalid</label>
+        <br>
+        <button onclick="validate()" type="button">Submit</button>
+    </form>
+</body>
+</html>

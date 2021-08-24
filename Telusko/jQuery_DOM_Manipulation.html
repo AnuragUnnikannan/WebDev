@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>jQuery - DOM Manipulation</title>
+</head>
+
+<body>
+    <h2>jQuery - DOM Manipulation</h2>
+    <button id="btn1">Action</button>
+    <button id="btn2">Change paragraph</button>
+    <button id="btn3">HTML</button>
+    <button id="btn4">Attr</button>
+    <button id="btn5">CSS</button>
+    <button id="btn6">Set Attr</button>
+    <button id="btn7">Get Attr</button>
+    <button id="btn8">Set CSS</button>
+    <button id="btn9">Get CSS</button>
+    <div id="div1" class="mydivs">
+        <p id="p1" class="p1class">This is third <b>paragraph</b> in second division</p>
+    </div>
+</body>
+
+<!-- Importing jQuery using CDN (Content Delivery Network) -->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function(){
+        
+        //copies the text inside #p1 and displays it in alert box
+        $("#btn1").click(function(){
+            var txt = $("#p1").text();
+            alert(txt);
+            /* alert($("#p1").text()); */
+        });
+
+        //changing the text inside #p1
+        $("#btn2").click(function(){
+            $("#p1").text("Hello World");
+        });
+
+        //displaying content inside #p1 (includes tags inside it)
+        $("#btn3").click(function(){
+            alert($("#p1").html());
+        });
+
+        //displaying value of an attribute
+        $("#btn4").click(function(){
+            alert($("#p1").attr("class"));
+        });
+
+        //displaying value of css property
+        $("#btn5").click(function(){
+            alert($("#p1").css("font-family"));
+        });
+
+        //setting attribute value
+        $("#btn6").click(function(){
+            $("#p1").attr("class", "p2class");
+        });
+
+        //displaying value of attribute
+        $("#btn7").click(function(){
+            alert($("#p1").attr("class"));
+        });
+
+        $("#btn8").click(function(){
+            $("#p1").css("font-family", "Segoe UI");
+        });
+
+        $("#btn9").click(function(){
+            alert($("#p1").css("font-family"));
+        });
+    });
+</script>
+
+</html>
