@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="jquery-3_5_1.js"></script>
+    </head>
+    <body>
+        <h1 id="number" onclick="count();"></h1>
+    </body>
+    <script type="text/javascript">
+        var counter = 0;
+        $("#number").html(counter);
+        function count() {
+            counter = counter + 1;
+            $("#number").html(counter);
+        }
+    </script>
+</html>

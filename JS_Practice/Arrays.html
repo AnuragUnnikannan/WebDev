@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="demo"></p>
+        <p id="att"></p>
+        <p id="join"></p>
+        <p id="pop"></p>
+        <p id="shift"></p>
+        <p id="push"></p>
+        <p id="unshift"></p>
+        <p id="change"></p>
+        <p id="del"></p>
+        <p id="splice"></p>
+        <script>
+            var fruits = ["Apple", "Orange", "Pear", "Grape", "Tangerine", "Mango"];
+            document.getElementById("demo").innerHTML = fruits[3];
+            document.getElementById("att").innerHTML = fruits.toString();
+            document.getElementById("join").innerHTML = fruits.join(" , ");
+            fruits.pop();   //to delete last element of array
+            document.getElementById("pop").innerHTML = fruits.join(" , ");
+            fruits.shift();  //to delete first element of array
+            document.getElementById("shift").innerHTML = fruits.join(" , ");
+            fruits.push("Cherry");  //to insert element at the back
+            document.getElementById("push").innerHTML = fruits.join(" , ");
+            fruits.unshift("Cherry");   //to insert element at the front
+            document.getElementById("unshift").innerHTML = fruits.join(" , ");
+            fruits[0] = "Kiwi";
+            document.getElementById("change").innerHTML = fruits.join(" , ");
+            delete fruits[2];   //to delete element at specific index
+            document.getElementById("del").innerHTML = fruits.join(" , ");
+            fruits.splice(2, 0, "Lemon", "Banana"); //to insert multiple elements. 2 is the starting index and 0 means we are not deleting any elements in the array
+            document.getElementById("splice").innerHTML = fruits.join(" , ");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script type="text/javascript">
+            var count;
+            var txt = "";
+            var person = {fname:"John", lname:"Smith", age:30};
+            var x;
+            var i = 0;
+            for(count = 0;count<=10;count++)    //for loop
+            {
+                document.write(count);
+                document.write("<br>");
+            }
+            document.write("<br>");
+            for(x in person)    //for-in loop
+            {
+                txt += person[x] + " ";
+            }
+            document.write(txt+"<br>");
+            document.write("<br>");
+            while(i<20) //while loop
+            {
+                document.write(i);
+                document.write("<br>");
+                i++;
+            }
+            document.write("<br>");
+
+            function myFunction()
+            {
+                var i = 0;
+                do      //do-while loop
+                {
+                    document.write(i+"<br>");
+                    i++;
+                }
+                while(i<10)
+                document.write(text);
+            }
+        </script>
+        <button onclick="myFunction()">Click Me</button>
+    </body>
+</html>

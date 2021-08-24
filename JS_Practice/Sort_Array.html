@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <script>
+            var cars = ["Volvo", "Acura", "Honda", "Lexus"];
+            document.getElementById("demo").innerHTML = "Original: " + cars;
+            cars.sort();
+            document.getElementById("demo1").innerHTML = "Sorted: " + cars;
+            cars.reverse();
+            document.getElementById("demo2").innerHTML = "Reverse: " + cars;
+        </script>
+    </body>
+</html>
