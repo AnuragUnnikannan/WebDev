@@ -1,0 +1,21 @@
+li	{
+	margin: 5px;
+}
+
+a {
+	padding-left: 22px;
+	text-decoration: none;
+	font-family: Product Sans, Calibri, Arial;
+}
+
+a[href$=".org"] {
+	background: rgb(252, 186, 3	);
+}
+
+a[href$=".edu"] {
+	background: rgb(194, 252, 3);
+}
+
+a[href$=".gov"] {
+	background: rgb(3, 181, 252);
+}

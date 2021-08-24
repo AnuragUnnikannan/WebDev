@@ -1,0 +1,39 @@
+body {
+	background: rgb(242, 242, 242);
+	font-family: Product Sans, Calibri, Arial;
+	margin: 1%;
+	padding: 1%;
+}
+
+nav {
+	box-sizing: border-box;
+	border: 1px solid rgb(6, 66, 92);
+	color: rgb(6, 66, 92);
+	background-color: rgb(72, 107, 2);
+	display: inline-block;
+	width: 20%;
+	min-width: 125px;
+	margin-width: 15px;
+	height: 100vh;
+	overflow: auto;
+}
+
+nav a {
+	display: block;
+	line-height: 45px;
+	height: 45px;
+	color: rgb(255, 255, 255);
+	background-color: rgb(72, 107, 2);
+	text-decoration: none;
+	background-color: rgb(772, 107, 2);
+	background: url(arrow-right.png);
+	padding-left: 50px;
+	margin: 10px 0 10px 5px;
+}
+
+section {
+	display: inline-block;
+	width: 70%;
+	height: 100vh;
+	overflow: auto;
+}

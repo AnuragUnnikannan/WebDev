@@ -1,0 +1,43 @@
+body {
+	background: rgb(242, 242, 242);
+	font-family: Product Sans, Calibri, Arial;
+	margin: 1%;
+	padding: 1%;
+}
+
+nav {
+	box-sizing: border-box;
+	border: 1px solid rgb(6, 66, 92);
+	color: rgb(6, 66, 92);
+	background-color: rgb(255, 255, 255);
+	overflow: auto;
+	padding-left: 20px;
+}
+
+nav a {
+	box-sizing: border-box;
+	display: inline-block;
+	line-height: 50px;
+	height: 60px;
+	color: rgb(255, 255, 255);
+	background-color: rgb(72, 107, 2);
+	text-decoration: none;
+	margin: 1% 5% 1% 0;
+	padding: 1% 5%;
+	border-radius: 25px;
+}
+
+.current {
+	background-color: rgb(136, 0, 0);
+}
+
+nav a:hover {
+	color: rgb(0, 0, 0);
+	border-radius: 0;
+}
+section {
+	display: inline-block;
+	width: 70%;
+	height: 100vh;
+	overflow: auto;
+}

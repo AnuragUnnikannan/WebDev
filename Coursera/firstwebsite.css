@@ -1,0 +1,79 @@
+ body {
+	background: rgb(179, 179, 179);
+	margin: 2%;
+	font-family: Product Sans, Calibri, Arial;
+	font-size: 125%;
+}
+
+nav a{
+	display: inline-block;
+	background: rgb(255, 255, 255);
+	width: 22%;
+}
+a {
+	display: inline-block;
+	margin-right: 2px;
+}
+
+a:hover {
+	color: rgb(227, 87, 11);
+}
+
+a:focus {
+	color: rgb(227, 87, 11);
+}
+h1 {
+	font-size: 150%;
+}
+
+header {
+	text-align: center;
+	padding-bottom: 15px;
+}
+
+header, footer {
+	background: rgb(102, 102, 102);
+	background: linear-gradient(rgb(10, 145, 242) 0%, rgb(242, 215, 10) 100%);
+	background: -moz-linear-gradient(top, rgb(10, 145, 242) 0%, rgb(242, 215, 10) 100%);
+	background: -webkit-linear-gradient(rgb(10, 145, 242) 0%, rgb(242, 215, 10) 100%);
+	background: -o-linear-gradient(rgb(10, 145, 242) 0%, rgb(242, 215, 10) 100%);
+}
+h1 {
+	color: rgb(255, 255, 255);
+}
+
+.half {
+	width: 45%;
+	margin-right: 2%;
+	display: inline-block;
+	float: left;
+}
+
+.whole {
+	clear: both;
+}
+
+h2 {
+	padding: 5px;
+	background: rgb(12, 163, 245);
+	colour: rgb(0, 0, 0);
+}
+
+details {
+	font-style: italic;
+}
+
+summary {
+	font-style: normal;
+}
+
+footer {
+	height: 100px;
+	padding: 10px;
+	clear: both;
+}
+
+img{
+	padding: 5px;
+	width: 75px;
+}
