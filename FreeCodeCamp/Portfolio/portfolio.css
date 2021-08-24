@@ -1,0 +1,368 @@
+:root{
+    --main-white: #f0f0f0;
+    --main-orange: #eaa221;
+    --main-green: #489672;
+    --main-gray: #303841;
+    --main-blue: #0a4158;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*, *::before, ::after{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    /*Default font-size in browser is 16px. So 62.5% means 10px. This will be the base font-size for the whole page.*/
+    /*We will use 'em' unit for setting font-size of different elements. 'em' is relative to the font size of parent element.*/
+    font-size: 62.5%;
+    /* scroll-behavior: smooth; */
+}
+
+/*setting font-size for different screen sizes*/
+/*1200px/16px = 75em*/
+@media (max-width: 75em){
+    html{
+        font-size: 60%;
+    }
+}
+
+/*980px/16px = 61.25em*/
+@media (max-width: 61.25em){
+    html{
+        font-size: 58%;
+    }
+}
+
+/*460px/16px = 28.75em*/
+@media (max-width: 28.75em){
+    html{
+        font-size: 55%;
+    }
+}
+
+body{
+    font-family: "Poppins", "Segoe UI", "Calibri", "Arial", sans-serif;
+    font-size: 1.8rem; /*Since 1 rem = 10px (62.5%), therefore 1.8rem = 18px*/
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--main-white);
+}
+
+h1, h2{
+    font-weight: 700;
+    text-align: center;
+}
+
+h1{
+    /*6rem = 60px*/
+    font-size: 6rem;
+}
+
+h2{
+    /*4.2rem = 42px;*/
+    font-size: 4.2rem;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--main-white);
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+#navbar{
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--main-orange);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+.nav-list{
+    display: flex;
+    /*2rem = 20px*/
+    margin-right: 2rem;
+}
+
+@media (max-width: 28.75em){
+    #navbar{
+        justify-content: center;
+    }
+
+    .nav-list{
+        margin: 0 1rem;
+    }
+}
+
+.nav-list a{
+    display: block;
+    /*2.2rem = 22px*/
+    font-size: 2.2rem;
+    /*Below property helps in spacing between the nav lists.*/
+    /*2rem = 20px*/
+    padding: 2rem;
+    /*Putting the background color change to transition with a time of 500ms = 0.5s*/
+    transition: background 500ms;
+}
+
+.nav-list a:hover{
+    background: var(--main-green);
+}
+
+/*Welcome Section*/
+
+#welcome-section{
+    display: flex;
+    /*flex-direction: column means vertical*/
+    flex-direction: column;
+    /*aligning content horizontally*/
+    justify-content: center;
+    /*aligning content vertically*/
+    align-items: center;
+    width: 100%;
+    /*vh means vieewport height. 100vh means the 100% of the browser window size*/
+    height: 100vh;
+    background: linear-gradient(60deg, #2bafe4 0%, #092f52 100%);
+}
+
+#welcome-section > p{
+    /*3rem = 30px*/
+    font-size: 3rem;
+    font-weight: 200;
+    font-style: italic;
+    color: var(--main-white);
+}
+
+#welcome-section h1:hover{
+    color: var(--main-orange);
+    transition: color 1s;
+}
+
+#welcome-section h1:not(:hover){
+    color: var(--main-white);
+    transition: color 1s;
+}
+
+/*Transition effect for hover*/
+#welcome-section > p:hover{
+    color: var(--main-orange);
+    transition: color 1s;
+}
+
+/*Transition effect for not hover*/
+#welcome-section p:not(:hover){
+    color: var(--main-white);
+    transition: color 1s;
+}
+
+/*Projects Section*/
+
+#projects-section{
+    text-align: center;
+    padding: 10rem 2rem;
+    background: var(--main-green);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+}
+
+.projects-section-header{
+    max-width: 640px;
+    /*40px*/
+    font-size: 4rem;
+    /*6rem = 60px*/
+    margin: 0 auto 6rem auto;
+    /*This is a trick for underline*/
+    border-bottom: 0.5rem solid var(--main-white);
+    transition: color 1s, border-color 1s;
+}
+
+/*Transition effect for hover*/
+.projects-section-header:hover{
+    color: var(--main-blue);
+    border-color: var(--main-blue);
+}
+
+/*460px/16px = 28.75em*/
+@media (max-width: 28.75em){
+    .projects-section-header{
+        /*4rem = 40px*/
+        font-size: 4rem;
+    }
+}
+
+.projects-grid{
+    display: grid;
+    /*1fr=225px*/
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280;
+    margin: 0 auto;
+    /*6rem=60px*/
+    margin-bottom: 6rem;
+}
+
+/*490px/16px = 30.625em*/
+@media (max-width: 30.625em){
+    #projects-section{
+        padding: 6rem 1rem;
+    }
+
+    .projects-grid{
+        /*1fr=225px*/
+        grid-template-columns: 1fr;
+    }
+}
+
+.project{
+    background: var(--main-blue);
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    transition: box-shadow 0.25s ease-in-out;
+}
+
+.project:hover{
+    box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.5);
+    
+}
+
+.code{
+    color: var(--main-gray);
+    transition: color 0.4s;
+}
+
+.project:hover .code{
+    color: #ff7f50;
+}
+
+.project-image{
+    height: 32rem;
+    width: 100%;
+    object-fit: fill;
+    border-radius: 10px;
+}
+
+.project-title{
+    height: calc(100% - 6.8rem);
+    /*20px and 5px respectively*/
+    padding: 2rem 0.5rem;
+}
+
+.project-title:hover{
+    color: var(--main-orange);
+    transition: color 0.4s;
+}
+
+.btn{
+    display: inline-block;
+    /*10px and 20px respectively*/
+    padding: 1rem 2rem;
+    border-radius: 2px;
+}
+
+.show-all{
+    /*20px*/
+    font-size: 2rem;
+    background: var(--main-blue);
+    border-radius: 5px;
+    transition: background 0.25s ease-in-out;
+}
+
+.show-all:hover{
+    background: var(--main-orange);
+}
+
+/*Contact Section*/
+
+#contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    padding: 0 2rem;
+    background: var(--main-blue);
+}
+
+.contact-header > h2{
+    /*60px*/
+    font-size: 6rem;
+}
+
+/*460px/16px = 28.75em*/
+@media (max-width: 28.75em){
+    .contact-header > h2{
+        font-size: 4rem;
+    }
+}
+
+.contact-header > p{
+    font-style: italic;
+}
+
+.contact-links{
+    display: inline;
+    float: left;
+    justify-content: center;
+    max-width: 980px;
+    /*40px*/
+    margin-top: 4rem;
+    /*to adjust for smaller devices*/
+    flex-wrap: wrap;
+}
+
+.contact-details{
+    /*24px*/
+    font-size: 2.4rem;
+    text-shadow: 2px 2px 2px black;
+    transition: transform 0.35s ease-in-out;
+}
+
+.contact-details:hover{
+    /*to move up*/
+    transform: translateY(-10px);
+}
+
+.logos{
+    display: inline;
+    float: left;
+    height: 3.5rem;
+    margin-right: 5px;
+    width: auto;
+}
+
+/*Footer*/
+
+footer{
+    font-weight: 300;
+    text-align: right;
+    /*20px*/
+    padding: 2rem;
+    border-top: 4px solid var(--main-orange);
+    background: var(--main-blue);
+}
+
+/*460px/16px = 28.75em*/
+@media (max-width: 28.75em){
+    footer{
+        text-align: center;
+    }
+}

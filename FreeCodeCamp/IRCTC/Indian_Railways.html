@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="ir.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRCTC</title>
+    <!-- <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="jQueryUI/jquery-ui.css">
+    <link rel="stylesheet" href="jQueryUI/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jQueryUI/jquery-ui.theme.css"> -->
+</head>
+<body>
+    <nav>
+        <img id="ir_logo1" src="https://www.irctc.co.in/nget/assets/images/secondry-logo.png" alt="Indian Railways">
+        <ul>
+            <li>Trains</li>
+            <li>Buses</li>
+            <li>Flights</li>
+            <li>Hotels</li>
+            <li>Holidays</li>
+            <li>Loyalty</li>
+            <li>Meals</li>
+            <li>Promotions</li>
+            <li>More</li>
+        </ul>
+        <img id="ir_logo2" src="https://www.irctc.co.in/nget/assets/images/logo.png" alt="IRCTC">
+    </nav>
+    <!-- This div is for outerdiv -->
+    <div id="outerdiv">
+        <!-- This div is for input section -->
+        <div id="innerdiv">
+            <h2>BOOK TICKET</h2>
+            <form action="">
+                <div class="container">
+                    <div class="grid-item">
+                        <label>From</label>
+                        <!-- Select tag is for dropdown, name attribute is for submitting the items in the menu -->
+                        <select name="from" id="from_id">
+                            <option value="howrah">Howrah</option>
+                            <option value="chennai">Chennai Central</option>
+                            <option value="new delhi">New Delhi</option>
+                            <option value="mumbai">Mumbai</option>
+                        </select>
+                    </div>
+
+                    <div class="grid-item">
+                        <label>To</label>
+                        <select name="to" id="to_id">
+                            <option value="howrah">Howrah</option>
+                            <option value="chennai">Chennai Central</option>
+                            <option value="new delhi">New Delhi</option>
+                            <option value="mumbai">Mumbai</option>
+                        </select>
+                    </div>
+
+                    <div class="grid-item">
+                        <label>Quota</label>
+                        <select name="quota" id="quota_id">
+                            <option value="general">General</option>
+                            <option value="ladies">Ladies</option>
+                            <option value="senior-citizen">Senior Citizen</option>
+                            <option value="divyaang">Divyaang</option>
+                            <option value="tatkal">Tatkal</option>
+                        </select>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <!-- name attribute is for submitting the items in the menu -->
+                        <label for="">Class</label>
+                        <select name="seating_class" id="seating_class_id">
+                            <option value="ac1stclass">AC 1st Class</option>
+                            <option value="ac2tier">AC 2 Tier</option>
+                            <option value="ac3tier">AC 3 Tier</option>
+                        </select>
+                    </div>
+
+                    <div class="grid-item">
+                        <label for="">Date</label>
+                        <input type="date" id="journey_date" name="journey-date">
+                    </div>
+                </div>
+
+                <div class="container2">
+                    <div class="grid-item2">
+                        <input type="checkbox" id="checkbox_id1" name="checkbox_id1" value="divyaang_concession">
+                        <label>Divyaang Concession</label>
+                    </div>
+
+                    <div class="grid-item2">
+                        <input type="checkbox" id="checkbox_id2" name="checkbox_id2" value="flexible_with_date">
+                        <label>Flexible With Date</label>
+                    </div>
+
+                    <div class="grid-item2">
+                        <input type="checkbox" id="checkbox_id3" name="checkbox_id3" value="available_berth">
+                        <label>Train with Available Berth</label>
+                    </div>
+
+                    <div class="grid-item2">
+                        <input type="checkbox" id="checkbox_id4" name="checkbox_id4" value="railway_pass">
+                        <label>Railway Pass Concession</label>
+                    </div>
+                </div>
+
+                <div id="center-button">
+                    <button type="button">Search</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="innerdiv2">
+            <h1>INDIAN RAILWAYS</h1>
+            <h3>Safety</h3>
+            <h3>Security</h3>
+            <h3>Punctuality</h3>
+        </div>
+        
+        <div id="innerdiv3">
+            <p>Automatic refund of full train fare in case of train cancellation by railways. No need to cancel such tickets.</p>
+        </div>
+
+        
+    </div>
+
+    <div id="outerdiv3">
+        <h2>Have you not found the right one?</h2>
+        <h2>Find a service suitable for you here.</h2>
+        <div class="container3">
+            <div class="grid-item3">
+                <a href="https://www.air.irctc.co.in/" target="_blank"><img class="logo" src="https://www.pngfind.com/pngs/m/238-2387973_air-png-transparent-background-flight-logo-png-png.png" alt="Flight"></a>
+                <p>FLIGHTS</p>
+            </div>
+            <div class="grid-item3">
+                <a href="https://hotel.irctctourism.com/hotels" target="_blank"><img class="logo" src="https://image.freepik.com/free-vector/beach-house-logo-design-template-beach-resort-villa-beach-hotel-logo_98702-711.jpg" alt="Hotel"></a>
+                <p>HOTELS</p>
+            </div>
+            <div class="grid-item3">
+                <a href="https://www.bus.irctc.co.in/home" target="_blank"><img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Bus-logo.svg/454px-Bus-logo.svg.png" alt="Bus"></a>
+                <p>BUS</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="outerdiv4">
+        <h2>HOLIDAYS</h2>
+        <div class="container4">
+            <div class="grid-item4">
+                <img src="https://s01.sgp1.cdn.digitaloceanspaces.com/article/126893-oltgfwpczd-1567744532.jpg" alt="Maharajas">
+                <h3>Maharaja"s Express</h3>
+                <p>Redefining Royalty, Luxury and Comfort, Maharaja’s express takes you on a sojourn to the era of bygone stately splendour of princely states. Sylvan furnishings, elegant ambience and modern amenities are amalgamated for an “Experience Unsurpassed”. It has been a winner of “World’s Leading Luxury train” by World Travel Awards consecutively for last six years.</p>
+                <a href="https://www.the-maharajas.com/" target="_blank">Read More-></a>
+            </div>
+
+            <div class="grid-item4">
+                <img src="https://resize.indiatvnews.com/en/resize/newbucket/715_-/2020/08/buddha-1596979292.jpg" alt="Gautam Buddha">
+                <h3>International Packages</h3>
+                <p>Best deals in International Holiday packages, handpicked by IRCTC, for Thailand, Dubai, Sri Lanka, Hong Kong, China, Macau, Bhutan, Nepal, U.K., Europe, USA, Australia etc. The packages are inclusive of sightseeing, meals, visa charges and overseas medical insurance to give you a hassle-free and memorable experience.</p>
+                <br>
+                <a href="https://www.irctctourism.com/" target="_blank">Read More-></a>
+            </div>
+
+            <div class="grid-item4">
+                <img src="https://www.alexandratourism.com/wp-content/uploads/2015/03/Green-Hills-landscape-mountains-1920x1080-1024x576.jpg" alt="Hills">
+                <h3>Rail Tour Packages</h3>
+                <p>IRCTC offers Exclusive Rail tour packages with confirmed train tickets, sight-seeing and meals for enchanting Nilgiri Mountains, Darjeeling, Kullu Manali, Kashmir, Gangtok or divine tours of Mata Vaishno Devi, Rameswaram, Madurai, Shirdi, Tirupati etc. Holiday packages/ Land packages to these destinations are also available.</p>
+                <br>
+                <a href="https://www.irctctourism.com/" target="_blank">Read More-></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="outerdiv5">
+        <p>Get connected with us on social networks</p>
+        <div id="social_media">
+            <a href="https://www.facebook.com/IRCTCofficial/"><img class="social" src="facebook.png" alt="facebook"></a>
+            <a href="https://twitter.com/IRCTCofficial" target="_blank"><img class="social" src="twitter.png" alt="twitter"></a>
+            <a href="https://youtube.com/c/IRCTCOFFICIAL" target="_blank"><img class="social" src="youtube.png" alt="youtube"></a>
+        </div>
+    </div>
+
+    <div id="outerdiv6">
+        <!-- <div class="innerclass1"> -->
+        <details>
+            <summary>IRCTC Trains</summary>
+            <ul>
+                <li>Salient Features</li>
+                <li>Ticket Cancellation Rules</li>
+                <li>Foreign Tourist T&C</li>
+                <li>Group Booking T&C</li>
+            </ul>
+        </details>
+        <!-- </div> -->
+
+        <!-- <div class="innerclass1"> -->
+        <details>
+            <summary>How to</summary>
+            <ul>
+                <li>Register</li>
+                <li>Book E-Ticket</li>
+                <li>Book tatkal ticket</li>
+                <li>Concession Tickets</li>
+            </ul>
+        </details>
+        <!-- </div> -->
+        
+        <!-- <div class="innerclass1"> -->
+        <details>
+            <summary>IRCTC Loyalty Program</summary>
+            <ul>
+                <li>SBI Credit Card</li>
+                <li>Loyalty Scheme</li>
+                <li>Account Linking</li>
+                <li>Set Transaction Password</li>
+            </ul>
+        </details>
+        <!-- </div> -->
+    </div>
+
+    <footer>
+        <img src="https://www.irctc.co.in/nget/assets/images/security.png" alt="card">
+        <p>Copyright &copy; 2021 - www.irctc.co.in. All Rights Reserved</p>
+        <a href="https://cris.org.in/crisweb/design1/index.jsp">CRIS</a>
+    </footer>
+</body>
+
+<!-- Importing jQuery using CDN (Content Delivery Network) -->
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script> -->
+
+<!-- jQuery UI should be imported after jQuery -->
+<!-- <script src="jQueryUI/jquery-ui.js" type="text/javascript"></script>
+ -->
+<!-- <script>
+    $(document).ready(function(){
+        $(".innerclass1").accordion({
+            collapsible: true,
+            heightStyle: true,
+        });
+    });
+</script> -->
+</html>

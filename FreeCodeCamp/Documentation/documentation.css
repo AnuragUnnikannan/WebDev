@@ -1,0 +1,137 @@
+body{
+    font-family: "Segoe UI", "Calibri", "Arial", sans-serif;
+    min-width: 300px;
+    line-height: 1.5;
+}
+
+#navbar{
+    /*keeping the navbar in fixed position, so it will stay in the same position throughout the page*/
+    position: fixed;
+    min-width: 300px;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 100%;
+    border-right: 2px solid dodgerblue;
+}
+
+#navbar ul{
+    padding: 0;
+    /*hardcoded height to 88% so that scroll bar will appear*/
+    height: 88%;
+    /*to enable vertical scroll (will automatically come if required*/
+    overflow-y: auto;
+    /*to disable horizontal scroll*/
+    overflow-x: hidden;
+}
+
+#navbar li{
+    border-top: 1px solid black;
+    list-style: none;
+    position: relative;
+    width: 100%;
+}
+
+#navbar a{
+    display: block;
+    padding-top: 10px;
+    padding-right: 30px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    position: relative;
+    padding-left: 30px;
+    padding-bottom: 10px;
+}
+
+header{
+    font-weight: bold;
+    font-size: 30px;
+    margin: 10px;
+    text-align: center;
+}
+
+#main-doc header{
+    /*alignment of header will be normal in the main documentation part*/
+    text-align: left;
+    margin: 0px;
+}
+
+#main-doc{
+    /* position: absolute; */
+    margin-left: 310px;
+    padding: 20px;
+    /* margin-bottom: 110px; */
+}
+
+section article{
+    margin: 10px;
+    font-size: 17px;
+}
+
+section li{
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+code{
+    display: block;
+    text-align: left;
+    /*adding a white space before any code section starts*/
+    white-space: pre-line;
+    position: relative;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 2;
+    font-family: "SF Mono", "Consolas", "Courier New";
+    font-size: 15px;
+    background: rgb(7, 36, 88);
+    color: yellow;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+}
+
+/*Modifying navbar for mobile phones*/
+@media (max-width: 815px){
+    #navbar ul{
+        border: none;
+        height: 207px;
+        padding-bottom: 10px;
+    }
+
+    #navbar{
+        position: absolute;
+        top: 0;
+        padding: 0;
+        margin: 0;
+        padding-bottom: 10px;
+        width: 100%;
+        max-height: 275px;
+        border: none;
+        z-index: 1;
+        border-bottom: 2px solid;
+    }
+
+    #main-doc{
+        position: relative;
+        margin-left: 0px;
+        margin-top: 270px;
+    }
+}
+
+/*Modifying main documentation layout for mobile phones*/
+@media (max-width: 400px){
+    #main-doc{
+        margin-left: -10px;
+    }
+
+    code{
+        margin-left: -20px;
+        width: 100%;
+        padding: 15px;
+        padding-left: 10px;
+        padding-right: 45px;
+        min-width: 233px;
+    }
+}
